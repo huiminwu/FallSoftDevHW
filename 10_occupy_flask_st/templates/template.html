@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> {{title}} </title> #jinja
+    </head>
+    <body>
+        <h3> {{heading}} <h3>
+        <table>
+        {% for key, val in collection.items() %}
+        <tr>
+            <td> {{key}} </td>
+            <td> {{val}} </td>
+        </tr>
+        {% endfor %}
+        </table>
+        <p> {{text}} </p>
+   </body>
+</html>
+
