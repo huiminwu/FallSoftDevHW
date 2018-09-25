@@ -6,6 +6,10 @@
     <body>
         <h3> {{heading}} <h3>
         <table>
+        <tr>
+            <td> {{tabletitleleft}} </td>
+            <td> {{tabletitleright}} </td>
+        </tr>
         <!-- Below is a for loops in jinja that iterates through the dict -->
         {% for key, val in collection.items() %}
         <tr>

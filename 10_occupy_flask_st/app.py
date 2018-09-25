@@ -6,7 +6,7 @@
 from flask import Flask, render_template
 import random
 import csv
-import getOccupation #imports file from previous homework
+import util.getOccupation as getOccupation #imports file from previous homework
 
 app = Flask(__name__)
 
@@ -15,6 +15,8 @@ def occupation():
     return render_template('template.html',
                     title = 'Occupations',
                     heading = 'Below shows the percentages of Americans with the corresponding job. You''ll also get a random job generated with the percentages as the probability.',
+                    tabletitleleft = 'Job Class',
+                    tabletitleright = 'Percentage',
                     collection = getOccupation.generateDict(), #calls the generateDict function in the getOccupation file
                     text = 'Job: ' + getOccupation.randomOccupation()) #calls the randomOccupation function in the getOccupation file
 
