@@ -23,8 +23,8 @@ def display_login():
 
 @app.route("/auth", methods=["POST", "GET"])
 def authorizer():
-    user = request.args['username']
-    passwd = request.args['password']
+    user = request.form['username']
+    passwd = request.form['password']
     if(user == "hui" and passwd == "min"): #if credentials are right
         session["hui"] = "min"
         return render_template('welcome.html',
