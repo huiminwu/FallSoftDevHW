@@ -1,7 +1,7 @@
-#Hui Min Wu
+#Hui Min Wu and Jack Lu, Team Teenage Mutant Jinja Turtles
 #SoftDev1 pd7
-#K14 -- Do I Know You?
-#2018-10-01
+#K15 -- Oh yes, perhaps I do...
+#2018-10-02
 
 from flask import Flask, render_template, request, url_for, redirect, session
 import os
