@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block title %} Error {% endblock %}
 {% block content %}
+{% set msgs = get_flashed_messages() %}
+    {% for each in msgs %}
+        {{each}}
+        <br>
+    {% endfor %}
 {{text}}
 {% endblock %}

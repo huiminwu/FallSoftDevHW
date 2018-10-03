@@ -3,7 +3,7 @@
 #K15 -- Oh yes, perhaps I do...
 #2018-10-02
 
-from flask import Flask, render_template, request, url_for, redirect, session
+from flask import Flask, render_template, request, url_for, redirect, session, flash
 import os
 app = Flask(__name__)
 app.secret_key = os.urandom(32) #generate a private key and assing to built in secret key
@@ -29,9 +29,14 @@ def authorizer():
         session["hui"] = "min"
         return render_template('welcome.html',
                                text = "Welcome!")
-    else: #if credentials arent right
-        return render_template('error.html',
-                               text = "Sorry, try again by going to root route")
+    elif(user == "hui"):
+        flash("Wrong password!")
+    elif(passwd != "min"):
+        flash("Wrong password and username!")
+    else:
+        flash("Wrong username!")
+    return render_template('error.html',
+                            text = "Sorry, try again by going to root route")
 
 @app.route("/logout")
 def logout():

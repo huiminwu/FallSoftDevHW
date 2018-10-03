@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %} Login {% endblock %}
 {% block content %}
+
 <form action="/auth" method = "POST"> <!-- form that returns info using GET method -->
 <input type = "text" name = "username">
     <input type = "password" name = "password">
