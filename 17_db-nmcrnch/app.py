@@ -1,5 +1,6 @@
 #Hui Min Wu and Maryann Foley Team Lil Peeps
 #SoftDev1 pd8
+#K17 -- Average
 #2018-10-05
 
 import sqlite3   #enable control of an sqlite database
