@@ -21,7 +21,7 @@ def createStuds():
     with open('raw/peeps.csv', newline = '') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            c.execute("INSERT INTO peps VALUES (\" {0} \", {1}, {2})".format(row["name"], row["age"], row["id"]))
+            c.execute("INSERT INTO peps VALUES (?, ?, ?)", (row["name"], row["age"], row["id"]))
 
 
 def createCourses():
@@ -32,7 +32,7 @@ def createCourses():
     with open('raw/courses.csv', newline = '') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            c.execute("INSERT INTO coarses VALUES (\" {0} \", {1}, {2})".format(row["code"], row["mark"], row["id"]))
+            c.execute("INSERT INTO coarses VALUES (?, ?, ?)", (row["code"], row["mark"], row["id"]))
 def lookUp():
     c.execute("SELECT name, peps.id, mark FROM peps, coarses WHERE peps.id = coarses.id")
     print(c.fetchall())
@@ -61,7 +61,7 @@ def createAverage():
         c.execute("INSERT INTO peeps_avg VALUES (?,?)",avg)
 
 def newCourse(course,mark,id):
-    c.execute("INSERT INTO coarses VALUES (\" {0} \", {1}, {2})".format(course, mark, id))
+    c.execute("INSERT INTO coarses VALUES (?, ? , ?)", (course, mark, id))
     recalculateAvgs()
 
 def recalculateAvgs():
