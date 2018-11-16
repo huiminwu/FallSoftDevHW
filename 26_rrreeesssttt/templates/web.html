@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html>
     <head>
-        <title> FDA Food Enforcement API </title>
+        <title> K26 </title>
     </head>
     <body>
-        <h3> Recall </h3>
+        <h2> Climate Data API </h2>
+        <h3> Monthly Average Temperature for Brazil </h3>
         <ul>
-            <li> Product: {{product}} </li>
-            <li> Amount: {{quantity}} </li>
-            <li> Reason for Recall: {{reason}} </li>
-            <li> Places Product Was Already Distributed to: {{distr}} </li>
+            <li> Scenario: {{scenario}} </li>
+            <li> Model: {{model}} </li>
+            <li> Values for each month: {{monthVals}} </li>
+            <li> Beginning Year: {{start}} </li>
+            <li> End Year: {{end}} </li>
+        </ul>
+        <br>
+        
+        <h2> Bored API </h2>
+        <h3> Random Activity you could do if you're bored: </h3>
+        <ul>
+            <li> Activity: {{activity}} </li>
+            <li> How possible this event is (0.0 being most. 1.0 most least): {{accessibility}} </li>
+            <li> Activity Category: {{type}} </li>
+            <li> Number of people this activity could involve: {{participants}} </li>
+            <li> Cost of event: {{price}} </li>
+        </ul>
+        <br>
+
+        <h2> Yelp API </h2>
+        <h3> Restaurant searched by phone number </h3>
+        <ul>
+            <li> <img src={{img}}> </img> </li>
+            <li> Name: {{name}} </li>
+            <li> Rating: {{rating}} </li>
+            <li> Price: {{price_rate}} </li>
+            <li> Phone Number: {{phone}} </li>
         </ul>
     </body>
 </html>
