@@ -1,6 +1,6 @@
-//MinZane -- Hui Min Wu, Zane Wang
+//Quaff -- Hui Min Wu, Raunak Chowdhury
 //SoftDev1 pd8
-//K28 -- Sequential Progression
+//K29 -- Sequential Progression
 //2018-12-18
 
 var fibonacci = function(n) {
@@ -31,17 +31,17 @@ var randomStudent = function() {
     return arrayName[Math.floor(Math.random() * arrayName.length)];
 }
 
-var a = document.getElementById("b");
-a.addEventListener("click", function() {
+var fib = document.getElementById("fib");
+fib.addEventListener("click", function() {
     console.log(fibonacci(5))
 });
 
-var b = document.getElementById("b");
-b.addEventListener("click", function() {
-    console.log(fibonacci(5))
+var g = document.getElementById("gcd");
+g.addEventListener("click", function() {
+    console.log(gcd(120, 75))
 });
 
-var c = document.getElementById("b");
-c.addEventListener("click", function() {
-    console.log(fibonacci(5))
+var randS = document.getElementById("ran");
+randS.addEventListener("click", function() {
+    console.log(randomStudent())
 });
