@@ -15,6 +15,7 @@ var fibonacci = function(n) {
 
 var gcd = function(a, b) {
     if (a < b) {
+        //making sure that the first parameter is larger than the second
         return gcd(b, a);
     } else if (b == 0) {
         return a;
@@ -25,22 +26,26 @@ var gcd = function(a, b) {
     };
 };
 
-var arrayName = ["Hui Min", "Zane", "Johnny"];
+var arrayName = ["Hui Min", "Zane", "Johnny", "Raunak"];
 
 var randomStudent = function() {
+    //generates a random number and multiplies it by the length so the index is within range
     return arrayName[Math.floor(Math.random() * arrayName.length)];
 }
 
+//fibonacci button
 var fib = document.getElementById("fib");
 fib.addEventListener("click", function() {
     console.log(fibonacci(5))
 });
 
+//gcd button
 var g = document.getElementById("gcd");
 g.addEventListener("click", function() {
     console.log(gcd(120, 75))
 });
 
+//random student button
 var randS = document.getElementById("ran");
 randS.addEventListener("click", function() {
     console.log(randomStudent())
