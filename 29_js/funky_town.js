@@ -47,6 +47,8 @@ g.addEventListener("click", function() {
 
 //random student button
 var randS = document.getElementById("ran");
-randS.addEventListener("click", function() {
-    console.log(randomStudent())
+randS.addEventListener("click", function(e) {
+    console.log(e)
 });
+
+
