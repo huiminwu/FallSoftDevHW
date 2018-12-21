@@ -18,10 +18,10 @@ var removeItem = function(e) {
 var lis = document.getElementsByTagName("li");
 
 for (var i = 0; i < lis.length; i++) {
-    lis[i].setAttribute('val', i);
+    lis[i].setAttribute('val', "item " + i);
     lis[i].addEventListener('mouseover',
 			    function() {
-				changeHeading("item " + this.getAttribute("val"));
+				changeHeading(this.getAttribute("val"));
 			    });
     lis[i].addEventListener('mouseout',
 			    function() {
@@ -34,7 +34,20 @@ var addItem = function(e) {
     var list = document.getElementById( "thelist");
     var item = document.createElement("li");
     item.innerHTML = "WORD";
+    item.setAttribute('val', "WORD");
     list.appendChild(item);
+    let liss = document.getElementsByTagName("li");
+    for (let i = 0; i < liss.length; i++) {
+        liss[i].addEventListener('mouseover',
+                    function() {
+                    changeHeading(this.getAttribute("val"));
+                    });
+        liss[i].addEventListener('mouseout',
+                    function() {
+                    changeHeading("Hello World!");
+                    });
+        liss[i].addEventListener('click', removeItem);
+    }
 }
 
 var button = document.getElementById("b");
