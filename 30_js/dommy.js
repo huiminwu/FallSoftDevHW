@@ -35,8 +35,10 @@ var addItem = function(e) {
     var item = document.createElement("li");
     item.innerHTML = "WORD";
     item.setAttribute('val', "WORD");
+    item.setAttribute('class', 'nofib');
     list.appendChild(item);
-    let liss = document.getElementsByTagName("li");
+    console.log(item);
+    let liss = document.getElementsByClassName("nofib");
     for (let i = 0; i < liss.length; i++) {
         liss[i].addEventListener('mouseover',
                     function() {
